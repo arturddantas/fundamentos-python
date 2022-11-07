@@ -19,3 +19,25 @@ history: lista todos os comandos dados até agora (últimos 50)
 history | grap "códigodesejado": procurar no history todos os códigos que mencionaram "códigodesejado" 
 ```
 
+Diferenças:
+Git: responsável pelo versionamento. Faz a versão do código.
+Github e Gitlab: repositórios de código.
+
+Fazer gitprofile: https://github.com/leticiadasilva
+
+Passar repositório do GitHub para pasta do computador local/pessoal:
+
+```
+cd "pasta que deseja armazenar"
+git clone "URL"
+```
+
+Para abrir o editor de código na pasta raíz:
+```
+code .
+```
+Dica: abrir vscode pelo terminal, para entrar direto na pasta desejada
+```
+cd pasta/subpasta
+code .
+```
