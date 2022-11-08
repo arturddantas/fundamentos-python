@@ -41,3 +41,12 @@ Dica: abrir vscode pelo terminal, para entrar direto na pasta desejada
 cd pasta/subpasta
 code .
 ```
+
+Sobre o git: https://ohshitgit.com/
+
+Ambiente de trabalho, site do LabRI UNESP: https://labriunesp.org/docs/projetos/ensino/ambiente
+
+
+-----
+Ambiente virtual: é uma estrutura que isola as bibliotecas do computador, para caso haja algum erro nos programas, o ambiente virtual evita danos ao próprio computador. Também, é possível replicar o ambiente virtual.
+Conda: tipo de ambiente virtual
