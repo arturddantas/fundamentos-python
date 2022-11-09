@@ -46,7 +46,7 @@ code .
 Sobre o git: https://ohshitgit.com/
 
 -----
-Ambiente de trabalho, site do LabRI UNESP: https://labriunesp.org/docs/projetos/ensino/ambiente
+[Informações úteis](https://labriunesp.org/docs/projetos/ensino/ambiente) na página "Ambiente de trabalho", no site do LabRI UNESP.
 
 Ambiente virtual: é uma estrutura que isola as bibliotecas do computador, para caso haja algum erro nos programas, o ambiente virtual evita danos ao próprio computador. Também, é possível replicar o ambiente virtual.
 Conda: tipo de ambiente virtual
@@ -55,9 +55,8 @@ Para criação do ambiente virtual:
 1. Logar no seu usuário pessoal do X2Go
 2. Pelo terminal, criar pasta "Códigos" a partir da raíz e importar "fundamentos-python" para a pasta Códigos.
 3. Abrir o vscode na pasta "fundamentos-python"
-4. Rodar os comandos da página [ambiente virtual do labri](https://labriunesp.org/docs/projetos/ensino/ambiente/conda#instru%C3%A7%C3%B5es-para-primeira-utiliza%C3%A7%C3%A3o)
-
-Informações para o ambiente virtual:
+4. Criar um arquivo com o nome "environment yml"
+5. Adicionar as seguintes informações, trocando o nome pelo seu
 ```
 name: env_artur
 channels:
@@ -72,3 +71,4 @@ dependencies:
   - requests
   - tinydb
 ```
+7. Rodar os comandos da página [ambiente virtual do labri](https://labriunesp.org/docs/projetos/ensino/ambiente/conda#instru%C3%A7%C3%B5es-para-primeira-utiliza%C3%A7%C3%A3o)
