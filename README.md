@@ -1,5 +1,7 @@
 # fundamentos-python
 
+[Material de estudos](https://labriunesp.org/docs/projetos/ensino/trilha-dados/paradas) sobre Python no site do LabRI UNESP.
+
 ### Linux: Códigos básicos
 ```
 ls: listar
