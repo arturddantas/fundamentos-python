@@ -1,4 +1,4 @@
-# fundamentos-python
+# Fundamentos de Python
 
 [Material de estudos](https://labriunesp.org/docs/projetos/ensino/trilha-dados/paradas) sobre Python no site do LabRI UNESP.
 
