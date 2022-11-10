@@ -74,3 +74,22 @@ dependencies:
   - tinydb
 ```
 7. Rodar os comandos da página [ambiente virtual do labri](https://labriunesp.org/docs/projetos/ensino/ambiente/conda#instru%C3%A7%C3%B5es-para-primeira-utiliza%C3%A7%C3%A3o)
+
+-----
+
+Print: exibição de mensagem
+
+Type:
+
+Input:
+
+Sinal de igual (=): variável. 
+
+Por exemplo:
+```
+texto = "LabRI Unesp"
+print(texto)
+
+nome = input(Artur)
+print(Olá "nome")
+```
