@@ -19,8 +19,3 @@ print(lista2)
 alo=['a', 'b', 'c', 'd']
 alo[2]='sim'
 print(alo)
-
-
-
-
-
