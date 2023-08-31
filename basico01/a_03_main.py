@@ -1,5 +1,4 @@
 from funcao import somar, subtrair
-# from funcao import *
 
 def calculadora(num1,num2):
     num1=input("digite um número:")
