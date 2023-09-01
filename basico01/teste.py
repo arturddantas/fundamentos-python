@@ -3,7 +3,6 @@ qualquernome = ('a', 'b', 'c', 'd')
 print(qualquernome)
 
 
-
 lista = ["a", "b", "c"]
 lista.append('d')
 lista.insert(0, 'e')
@@ -22,16 +21,29 @@ alo[2]='sim'
 print(alo)
 """
 
-'''
+
 nome=input('Qual é o seu nome?')
 idade=input('Quantos anos você tem?')
 escola=input('Onde você estuda?')
 print('Olá', nome, 
 'Me diga a sua idade:', idade, 
 'Onde você estuda?', escola)
-'''
+
 
 dia=input('Qual o dia que você nasceu?')
 mês=input('E o mês?')
 ano=input('E o ano?')
 print('Você nasceu no dia', dia, 'do mês', mês, 'no ano de', ano)
+
+
+num1=int(input('Digite um número:'))
+num2=int(input('Digite um número:'))
+s=num1+num2
+print('A soma entre {} e {} vale {}'.format(num1, num2, s))
+
+'''
+int
+float
+bool: verdadeiro e falso
+str
+'''
