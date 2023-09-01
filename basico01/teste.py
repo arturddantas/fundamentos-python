@@ -22,10 +22,16 @@ alo[2]='sim'
 print(alo)
 """
 
-
+'''
 nome=input('Qual é o seu nome?')
 idade=input('Quantos anos você tem?')
 escola=input('Onde você estuda?')
 print('Olá', nome, 
 'Me diga a sua idade:', idade, 
 'Onde você estuda?', escola)
+'''
+
+dia=input('Qual o dia que você nasceu?')
+mês=input('E o mês?')
+ano=input('E o ano?')
+print('Você nasceu no dia', dia, 'do mês', mês, 'no ano de', ano)
