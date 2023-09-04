@@ -7,7 +7,7 @@ def loop_for():
     capitais=["Brasília", "Buenos Aires", "Lisboa", "Pequim", "Túnis"]
     print(países)
     print(locais)
-    print (capitais)
+    print(capitais)
     for país, local, capital in zip(países, locais, capitais):
         print(país, local, capital)
         if país=="Brasil":
@@ -22,7 +22,3 @@ def loop_for():
 
 if __name__ == "__main__":
     main()
-
-
-
-# i = variável qualquer

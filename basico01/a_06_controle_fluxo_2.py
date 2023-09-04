@@ -17,3 +17,5 @@ def construir_url():
 
 if __name__ == "__main__":
     main()
+
+# Linha 14: redefinindo o valor da variável

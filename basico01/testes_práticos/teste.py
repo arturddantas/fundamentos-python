@@ -1,4 +1,3 @@
-"""
 qualquernome = ('a', 'b', 'c', 'd')
 print(qualquernome)
 
@@ -19,9 +18,10 @@ print(lista2)
 alo=['a', 'b', 'c', 'd']
 alo[2]='sim'
 print(alo)
+
+
+
 """
-
-
 nome=input('Qual é o seu nome?')
 idade=input('Quantos anos você tem?')
 escola=input('Onde você estuda?')
@@ -40,6 +40,7 @@ num1=int(input('Digite um número:'))
 num2=int(input('Digite um número:'))
 s=num1+num2
 print('A soma entre {} e {} vale {}'.format(num1, num2, s))
+"""
 
 '''
 int
