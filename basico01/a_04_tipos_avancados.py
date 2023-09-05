@@ -30,8 +30,20 @@ def lista(b,a="Argentina"):
     print(len(lista[1]))
 
 def conjunto():
-    conjunto={"Brasil", "Argentina"}
-    print(conjunto)
+    x = {1, 2, 3, 4, 5}
+    y = {1, 2, 5}
+    x.add(6) #só um item por vez
+    #x.discard(1) #só um item por vez
+    #x.pop() #remove o primeiro item
+    #x.clear()
+    print(x)
+    """
+    print(x.difference(y))
+    print(x.intersection(y))
+    print(x.isdisjoint(y))
+    print(x.issuperset(y))
+    """
+
 
 def dicionário():
     dicionário={
@@ -43,7 +55,7 @@ def dicionário():
 
 
 if __name__ == "__main__":
-    tupla()
+    conjunto()
 
 # len = contagem
 # append = adicionar
