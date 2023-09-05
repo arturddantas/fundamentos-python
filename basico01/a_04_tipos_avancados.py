@@ -46,16 +46,12 @@ def conjunto():
 
 
 def dicionário():
-    dicionário={
-        "país":"Brasil", 
-        "continente":"América"}
-    print(dicionário["país"])
-    print("país" in dicionário)
-
+    dicionário={'a':1, 'b':2, 'c':3}
+    print('a' in dicionário) #nesse caso, só me mostra a posição das letras
+    print(dicionário.get('b'))
+    print(dicionário.items())
+    print(dicionário.keys())
 
 
 if __name__ == "__main__":
-    conjunto()
-
-# len = contagem
-# append = adicionar
+    dicionário()
