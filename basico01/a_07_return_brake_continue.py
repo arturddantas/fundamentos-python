@@ -14,8 +14,8 @@ def acessar_pagina(url):
     return bs
 
 def extrair_infos():
-    lista_de_links = construir_url()[0]
- #   print(lista_de_links)
+    lista_de_links = construir_url()#[0]
+    #print(lista_de_links)
     for link_geral in lista_de_links:
         print(link_geral)
         html = acessar_pagina(link_geral)
@@ -27,15 +27,27 @@ def extrair_infos():
             titulo = nota_de_imprensa.h2.text.strip()
             link = nota_de_imprensa.a['href']
             numero = nota_de_imprensa.span.text
+            numero = numero.split()
+            #numero = numero[4]
             lista_datas = nota_de_imprensa.find_all('span', attrs={'class':'summary-view-icon'})
             data = lista_datas[0].text.strip()
             horário = lista_datas[1].text.strip()
-            print(titulo)
-            print(link)
-            print(numero)
-            print(data)
-            print(horário)
-            print("###")
+            texto = acessar_pagina(link)
+            texto2 = texto.find('div', attrs={'property': 'rnews:articleBody'})
+            paragrafos = texto2.find_all('p')
+            lista_paragrafos = []
+            for paragrafo in paragrafos:
+                texto_paragrafo = paragrafo.text
+                lista_paragrafos.append(texto_paragrafo)
+            
+            #print(titulo)
+            #print(link)
+            #print(numero)
+            #print(data)
+            #print(horário)
+            #print(texto2)
+            print(lista_paragrafos)
+            #print("###")
 
 
     # listaurls = tupla[0]
@@ -47,7 +59,6 @@ def construir_url():
     links_notasdeimprensa="https://www.gov.br/mre/pt-br/canais_atendimento/imprensa/notas-a-imprensa?b_start:int="
     contador = 360
     listaurls = []
-    labri = 'artur'
     while contador >= 0:
         url_completa = links_notasdeimprensa + str(contador)
         if contador == 0:
@@ -56,7 +67,7 @@ def construir_url():
         # print(url_completa)
         listaurls.append(url_completa)
     #print(listaurls)
-    return listaurls, labri
+    return listaurls
 
 def main():
     url = "https://www.gov.br/mre/pt-br/canais_atendimento/imprensa/notas-a-imprensa"
