@@ -1,4 +1,5 @@
 import requests
+import re
 from bs4 import BeautifulSoup
 from tinydb import TinyDB, Query
 
@@ -27,8 +28,9 @@ def extrair_infos():
             titulo = nota_de_imprensa.h2.text.strip()
             link = nota_de_imprensa.a['href']
             numero = nota_de_imprensa.span.text
-            numero = numero.split()
+            #numero = numero.split()
             #numero = numero[4]
+            numero = re.findall(r'\d+', numero)
             lista_datas = nota_de_imprensa.find_all('span', attrs={'class':'summary-view-icon'})
             data = lista_datas[0].text.strip()
             horário = lista_datas[1].text.strip()
@@ -40,14 +42,15 @@ def extrair_infos():
                 texto_paragrafo = paragrafo.text
                 lista_paragrafos.append(texto_paragrafo)
             
-            #print(titulo)
-            #print(link)
-            #print(numero)
-            #print(data)
-            #print(horário)
+            print(titulo)
+            print(link)
+            print(numero)
+            print(data)
+            print(horário)
+            print(link_geral)
             #print(texto2)
-            print(lista_paragrafos)
-            #print("###")
+            #print(lista_paragrafos)
+            print("###")
 
 
     # listaurls = tupla[0]
