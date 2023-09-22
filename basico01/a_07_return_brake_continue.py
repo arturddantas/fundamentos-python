@@ -14,8 +14,8 @@ def acessar_pagina(url):
     # print(bs)
     return bs
 
-def extrair_infos():
-    lista_de_links = construir_url()#[0]
+def extrair_infos(lista_urls):
+    lista_de_links = lista_urls
     #print(lista_de_links)
     for link_geral in lista_de_links:
         print(link_geral)
@@ -23,7 +23,7 @@ def extrair_infos():
         #print(html)
         #<div id="content-core">
         conteudo = html.find('div', attrs={'id':'content-core'})
-        lista_nota_imprensa = conteudo.find_all("article")
+        lista_nota_imprensa = conteudo.find_all("article")                                      #sempre devolve como lista
         for nota_de_imprensa in lista_nota_imprensa:
             titulo = nota_de_imprensa.h2.text.strip()
             link = nota_de_imprensa.a['href']
@@ -66,16 +66,16 @@ def construir_url():
         url_completa = links_notasdeimprensa + str(contador)
         if contador == 0:
             url_completa = "https://www.gov.br/mre/pt-br/canais_atendimento/imprensa/notas-a-imprensa"
-        contador = contador - 30
+        contador -= 30
         # print(url_completa)
         listaurls.append(url_completa)
     #print(listaurls)
     return listaurls
 
 def main():
-    url = "https://www.gov.br/mre/pt-br/canais_atendimento/imprensa/notas-a-imprensa"
     # página_web = acessar_página(url)
-    lista = extrair_infos()
+    lista_urls = construir_url()
+    extrair_dados = extrair_infos(lista_urls)
 
 
 
