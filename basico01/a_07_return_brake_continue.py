@@ -23,7 +23,7 @@ def extrair_infos(lista_urls):
         #print(html)
         #<div id="content-core">
         conteudo = html.find('div', attrs={'id':'content-core'})
-        lista_nota_imprensa = conteudo.find_all("article")                                      #sempre devolve como lista
+        lista_nota_imprensa = conteudo.find_all("article")                                      #find_all sempre devolve como lista
         for nota_de_imprensa in lista_nota_imprensa:
             titulo = nota_de_imprensa.h2.text.strip()
             link = nota_de_imprensa.a['href']
