@@ -51,10 +51,10 @@ def link_pdf(url):
                 origem = 'Franca' 
                 banco = inserir_db(data, url_pdf, categoria, num_edit, origem)
 
-
 def main():
     url = 'https://www.franca.sp.gov.br/arquivos/diario-oficial/documentos/'
     link_pdf(url)
 
 if __name__ == "__main__":
     main()
+
