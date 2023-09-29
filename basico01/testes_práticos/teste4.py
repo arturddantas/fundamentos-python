@@ -29,12 +29,13 @@ def extrair_infos():
 def construir_url():
     link = 'https://www.gov.br/cultura/pt-br/assuntos/noticias?b_start:int=' #Confirmar link
     #contador = 600
-    
+
     lista_de_links = []
     while contador >= 0:
         url_final = link + str(contador)
         if contador == 0:
             url_final = 'https://www.gov.br/cultura/pt-br/assuntos/noticias'
+        contador = contador + 20
 # Como fazer o intervalo de 20 em 20?
 
 
