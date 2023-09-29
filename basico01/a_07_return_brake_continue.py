@@ -66,7 +66,7 @@ def construir_url():
         url_completa = links_notasdeimprensa + str(contador)
         if contador == 0:
             url_completa = "https://www.gov.br/mre/pt-br/canais_atendimento/imprensa/notas-a-imprensa"
-        contador -= 30
+        contador -= 30 #isso é a mesma coisa que contador = contador - 30
         # print(url_completa)
         listaurls.append(url_completa)
     #print(listaurls)

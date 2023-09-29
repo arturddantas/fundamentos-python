@@ -4,10 +4,10 @@ from datetime import datetime, timedelta       #Analisa o intervalo como data
 
 
 
-def url_principal():
+def acessar_pagina():
     url = 'https://www.gov.br/cultura/pt-br/assuntos/noticias'
     pagina = requests.get(url)
-    soup = BeautifulSoup(pagina.text, 'html.parser')
+    bs = BeautifulSoup(pagina.text, 'html.parser')
     if pagina.status_code == 200:
         print(pagina)
         #return pagina
@@ -15,34 +15,36 @@ def url_principal():
     elif pagina.status_code == 400:
         print(pagina)
         #return pagina
+    return bs
 
 
-'''
-def intervalo():
-    for n in range(0, 10):
-        data = datetime(2023, 9, 22) + timedelta(days=n)
-
-O uso do datetime e timedelta talvez seja funcional apenas para quando quero definir um intervalo de coleta. Exemplo: quero coletar notícias
-a cada 6 horas.
-'''
-
-def acessar_pagina():
-    pass
 
 def inserir_db():
     pass
 
 def extrair_infos():
     pass
+    #Fazer toda a análise do html nessa função
 
 def construir_url():
-    pass
+    link = 'https://www.gov.br/cultura/pt-br/assuntos/noticias?b_start:int=' #Confirmar link
+    #contador = 600
+    
+    lista_de_links = []
+    while contador >= 0:
+        url_final = link + str(contador)
+        if contador == 0:
+            url_final = 'https://www.gov.br/cultura/pt-br/assuntos/noticias'
+# Como fazer o intervalo de 20 em 20?
+
 
 def salvar_internetarchive():
     pass
 
 def gerar_html():
     pass
+
+
 
 def main():
     final = url_principal()
