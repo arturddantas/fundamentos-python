@@ -9,14 +9,13 @@ def acessar_pagina():
     pagina = requests.get(url)
     bs = BeautifulSoup(pagina.text, 'html.parser')
     if pagina.status_code == 200:
-        print(pagina)
+        print(pagina.text)
         #return pagina
 
     elif pagina.status_code == 400:
         print(pagina)
         #return pagina
     return bs
-
 
 
 def inserir_db():
@@ -28,7 +27,7 @@ def extrair_infos():
 
 def construir_url():
     link = 'https://www.gov.br/cultura/pt-br/assuntos/noticias?b_start:int=' #Confirmar link
-    #contador = 600
+    contador = 600
 
     lista_de_links = []
     while contador >= 0:
@@ -36,7 +35,9 @@ def construir_url():
         if contador == 0:
             url_final = 'https://www.gov.br/cultura/pt-br/assuntos/noticias'
         contador = contador + 20
-# Como fazer o intervalo de 20 em 20?
+    lista_de_links.append(link)
+    print(lista_de_links)
+
 
 
 def salvar_internetarchive():
@@ -51,7 +52,7 @@ def main():
     final = url_principal()
 
 if __name__ == "__main__":
-    url_principal()
+    construir_url()
 
 #https://www.gov.br/cultura/pt-br/assuntos/noticias
 #https://www.gov.br/defesa/pt-br/centrais-de-conteudo/noticias
