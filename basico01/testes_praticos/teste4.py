@@ -9,7 +9,7 @@ def acessar_pagina():
     url = 'https://www.gov.br/cultura/pt-br/assuntos/noticias'
     pagina = requests.get(url)
     bs = BeautifulSoup(pagina.text, 'html.parser')
-    
+    '''
     if pagina.status_code == 200:
         print(pagina.text)
         #return pagina
@@ -17,7 +17,7 @@ def acessar_pagina():
     elif pagina.status_code == 400:
         print(pagina)
         #return pagina
-    
+    '''
     return bs
 
 
@@ -28,10 +28,11 @@ def extrair_infos():
     #conteudo_total = lista_de_links
     #Fazer toda a análise do html nessa função
     html = acessar_pagina()
+    #print(html)
     conteudo = html.find('div', attrs={'id':'content-core'})
-    for nomenclaturas in html:
-        titulo = html.find('h2', attrs={'class': 'titulo'}).text.strip()
-        print(titulo)
+    #for nomenclaturas in html:
+    titulo = html.find('h2', attrs={'class': 'titulo'})
+    print(titulo)
 
 
 def construir_url():
