@@ -32,8 +32,9 @@ def extrair_infos():
     conteudo = html.find('div', attrs={'id':'content-core'})
     #for nomenclaturas in html:
     titulo = html.find('h2', attrs={'class': 'titulo'})
+    data = html.find('span', attrs={'class': 'data'})
     print(titulo)
-
+    print(data)
 
 def construir_url():
     link = 'https://www.gov.br/cultura/pt-br/assuntos/noticias?b_start:int=' #Confirmar link
