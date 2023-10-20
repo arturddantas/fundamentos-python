@@ -29,12 +29,12 @@ def extrair_infos():
     #Fazer toda a análise do html nessa função
     html = acessar_pagina()
     #print(html)
-    conteudo = html.find('div', attrs={'id':'content-core'})
-    #for nomenclaturas in html:
-    titulo = html.find('h2', attrs={'class': 'titulo'})
-    data = html.find('span', attrs={'class': 'data'})
-    print(titulo)
-    print(data)
+    conteudo = html.find_all('div', attrs={'id':'content-core'})
+    for nomenclaturas in conteudo:
+        titulo = html.find('h2', attrs={'class': 'titulo'}).text.strip()
+        data = html.find('span', attrs={'class': 'data'}).text.strip()
+        print(titulo)
+        print(data)
 
 def construir_url():
     link = 'https://www.gov.br/cultura/pt-br/assuntos/noticias?b_start:int=' #Confirmar link
