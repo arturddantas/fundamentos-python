@@ -33,8 +33,10 @@ def extrair_infos():
     for nomenclaturas in conteudo:
         titulo = html.find('h2', attrs={'class': 'titulo'}).text.strip()
         data = html.find('span', attrs={'class': 'data'}).text.strip()
+        descricao = html.find('span', attrs={'class': 'descricao'}).text.strip()
         print(titulo)
         print(data)
+        print(descricao)
 
 def construir_url():
     link = 'https://www.gov.br/cultura/pt-br/assuntos/noticias?b_start:int=' #Confirmar link
